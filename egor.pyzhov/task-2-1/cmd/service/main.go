@@ -4,32 +4,36 @@ import "fmt"
 
 func main() {
 	var departmentCount int
-	_, err := fmt.Scan(&departmentCount)
 
+	_, err := fmt.Scan(&departmentCount)
 	if err != nil {
 		fmt.Println("Error: Enter a whole number for the departments")
+
 		return
 	}
 
 	if departmentCount < 1 || departmentCount > 1000 {
 		fmt.Println("Error: the number of departments must be between 1 and 1000")
+
 		return
 	}
 
 	for i := 1; i <= departmentCount; i++ {
 		var employeeCount int
+
 		minTemp := 15
 		maxTemp := 30
 
 		_, err := fmt.Scan(&employeeCount)
-
 		if err != nil {
 			fmt.Println("Error: Enter a whole number for the employees")
+
 			return
 		}
 
 		if employeeCount < 1 || employeeCount > 1000 {
 			fmt.Println("Error: the number of employees must be between 1 and 1000")
+
 			return
 		}
 
@@ -50,6 +54,7 @@ func main() {
 
 				return
 			}
+
 			if minTemp <= maxTemp {
 				fmt.Println(minTemp)
 			} else {
